@@ -9,6 +9,13 @@
   <body>
     <div id="fawaterkDivId"></div>
     <script>
+      function generateHashKey(data) {
+        var secretKey = "5151e96ef2df22f33ddfeb752646ebe557b854d5a23f898656";
+        var queryParam =
+          "Domain=https://hazorox.github.io/test/&ProviderKey=FAWATERAK.19944";
+        var hash = hash_hmac("sha256", queryParam, secretKey, false);
+        return hash;
+      }
       var pluginConfig = {
         envType: "test",
         hashKey: "HASH-KEY",
